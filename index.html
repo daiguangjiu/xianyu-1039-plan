@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>义乌 1039 外贸服务｜闲鱼投放策略方案</title>
+<style>
+:root{
+  --ink:#0f1720; --ink2:#374651; --muted:#6d7d8a; --line:#e2e8ee;
+  --bg:#f4f6f9; --card:#fff;
+  --brand:#2563c4; --brand-d:#1a4a94; --brand-l:#eaf1fc;
+  --gold:#c8901a; --gold-l:#fffaef;
+  --red:#d94a2e; --red-l:#fff4f2;
+  --blue:#2f6df6; --blue-l:#eff3fe;
+  --purple:#6b46c9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;font-size:14px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px 70px}
+.hero{background:linear-gradient(135deg,#0a1c30 0%,#123b66 52%,#0c2a4a 100%);color:#fff;padding:42px 0 34px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-150px;top:-150px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,196,.4),transparent 66%)}
+.hero::before{content:"";position:absolute;left:-90px;bottom:-170px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(200,144,26,.16),transparent 68%)}
+.hero .wrap{padding-bottom:0;position:relative;z-index:2}
+.eyebrow{display:inline-block;font-size:11px;letter-spacing:.18em;color:#9cc3f5;border:1px solid rgba(156,195,245,.36);padding:4px 11px;border-radius:3px;margin-bottom:16px}
+.hero h1{font-size:30px;line-height:1.3;font-weight:700;letter-spacing:-.6px}
+.hero h1 em{font-style:normal;color:#7fb3f0}
+.hero p.sub{color:#a9bdd4;font-size:13.5px;margin-top:12px;max-width:780px;line-height:1.78}
+.meta{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:20px;font-size:12.5px;color:#8fa8c4}
+.meta b{color:#fff;font-weight:600}
+.verdict{margin-top:20px;background:rgba(255,255,255,.07);border-left:3px solid var(--brand);padding:13px 17px;border-radius:0 6px 6px 0;font-size:13.5px;color:#e2ecf7;line-height:1.8;max-width:940px}
+.verdict b{color:#7fb3f0}
+.tabs{position:sticky;top:0;z-index:40;background:rgba(244,246,249,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin-bottom:22px}
+.tabs-in{max-width:1100px;margin:0 auto;display:flex;gap:2px;overflow-x:auto;padding:0 18px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.tabs-in::-webkit-scrollbar{display:none}
+.tabs button{border:0;background:none;padding:13px 15px;font-size:13.5px;color:var(--muted);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;font-family:inherit;transition:color .15s}
+.tabs button:hover{color:var(--ink)}
+.tabs button.on{color:var(--brand-d);border-bottom-color:var(--brand);font-weight:600}
+.panel{display:none}
+.panel.on{display:block;animation:fade .22s ease}
+@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:26px 28px;margin-bottom:16px}
+h2{font-size:20px;margin-bottom:6px;letter-spacing:-.2px;line-height:1.4}
+h2 .n{color:var(--brand);font-family:ui-monospace,Menlo,monospace;font-size:13px;margin-right:8px;vertical-align:2px}
+.desc{color:var(--muted);font-size:13px;margin-bottom:20px;line-height:1.78}
+h3{font-size:15px;margin:26px 0 11px;padding-left:10px;border-left:3px solid var(--brand);line-height:1.35}
+h3:first-child{margin-top:0}
+h4{font-size:13px;margin-bottom:7px;color:var(--ink)}
+p{font-size:13.5px;color:var(--ink2);margin-bottom:10px;line-height:1.8}
+ul,ol{font-size:13.5px;color:var(--ink2);padding-left:19px;line-height:1.8}
+li{margin-bottom:5px}
+strong{color:var(--ink);font-weight:600}
+code{background:#eef3f6;padding:1px 5px;border-radius:3px;font-size:12px;font-family:ui-monospace,Menlo,monospace;color:#0b4d8f}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:520px}
+th{background:#eef3f6;text-align:left;padding:9px 12px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--line);font-size:12px;white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid #eef2f5;color:var(--ink2);vertical-align:top;line-height:1.65}
+tr:last-child td{border-bottom:0}
+tbody tr:hover{background:#fafcfd}
+.tw table{margin:0}
+td.c,th.c{text-align:center}
+td.num{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;white-space:nowrap}
+tr.sum td{background:#f5f7fa;font-weight:600;color:var(--ink)}
+.grid{display:grid;gap:13px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.box{border:1px solid var(--line);border-radius:8px;padding:16px 18px;background:#fbfcfd}
+.box h4{font-size:13px;margin-bottom:7px;color:var(--ink)}
+.box p{font-size:12.5px;margin-bottom:0;color:var(--muted);line-height:1.72}
+.box ul{font-size:12.5px;margin-top:7px;color:var(--muted);padding-left:16px;line-height:1.72}
+.kpi{display:flex;flex-direction:column;gap:2px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--brand);border-radius:0 0 8px 8px;padding:15px 17px}
+.kpi .l{font-size:11.5px;color:var(--muted)}
+.kpi .v{font-size:25px;font-weight:700;letter-spacing:-1px;color:var(--ink);line-height:1.22}
+.kpi .s{font-size:11.5px;color:var(--brand-d);margin-top:1px}
+.kpi.gd{border-top-color:var(--gold)} .kpi.gd .s{color:#8a6410}
+.kpi.bl{border-top-color:var(--blue)} .kpi.bl .s{color:#2b56c0}
+.kpi.rd{border-top-color:var(--red)} .kpi.rd .s{color:#b23f28}
+.note{border-left:3px solid var(--gold);background:var(--gold-l);padding:13px 16px;font-size:13px;color:#6b5320;border-radius:0 6px 6px 0;margin:14px 0;line-height:1.8}
+.warn{border-left:3px solid var(--red);background:var(--red-l);padding:13px 16px;font-size:13px;color:#8c3423;border-radius:0 6px 6px 0;margin:14px 0;line-height:1.8}
+.ok{border-left:3px solid var(--brand);background:var(--brand-l);padding:13px 16px;font-size:13px;color:#12457e;border-radius:0 6px 6px 0;margin:14px 0;line-height:1.8}
+.info{border-left:3px solid var(--blue);background:var(--blue-l);padding:13px 16px;font-size:13px;color:#1f3f96;border-radius:0 6px 6px 0;margin:14px 0;line-height:1.8}
+.note b,.warn b,.ok b,.info b{color:inherit;font-weight:700}
+.tag{display:inline-block;font-size:11px;padding:1.5px 7px;border-radius:99px;background:#eef3f6;color:#47606c;margin:0 3px 3px 0;white-space:nowrap;line-height:1.6}
+.tag.g{background:#e8f1fc;color:#1a4a94}
+.tag.y{background:#fdf3dc;color:#8a6410}
+.tag.r{background:#fdeeea;color:#b23f28}
+.tag.b{background:#eaf0fe;color:#2b56c0}
+.tag.p{background:#f0eafd;color:#553a9e}
+.code{background:#0f1720;color:#c9d9e2;border-radius:9px;overflow:hidden;border:1px solid #1e2b36;margin:11px 0}
+.code-h{display:flex;justify-content:space-between;align-items:center;padding:9px 14px;background:#16232e;border-bottom:1px solid #22323f;font-size:11.5px;color:#8fa4b2;gap:10px}
+.code-h .cp{background:var(--brand);color:#fff;border:0;border-radius:5px;padding:4px 11px;font-size:11.5px;font-weight:600;cursor:pointer;font-family:inherit;flex:0 0 auto}
+.code-h .cp:hover{background:#3b7ade}
+.code pre{white-space:pre-wrap;word-break:break-word;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;line-height:1.82;padding:16px 18px;color:#c9d9e2}
+.code pre b{color:#7fb3f0;font-weight:600}
+.code pre i{color:#d9a93b;font-style:normal}
+.chk{list-style:none;padding:0}
+.chk li{display:flex;gap:9px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed #eceff2;font-size:13px}
+.chk li:last-child{border-bottom:0}
+.chk .bx{flex:0 0 14px;height:14px;border:1.5px solid #c2ccd4;border-radius:3px;margin-top:4px}
+.footer{text-align:center;font-size:11.5px;color:#9aa9b4;margin-top:28px;line-height:2}
+@media(max-width:820px){ .g3,.g4{grid-template-columns:1fr 1fr} }
+@media(max-width:640px){
+  body{font-size:13.5px}
+  .wrap{padding:0 13px 60px}
+  .hero{padding:30px 0 26px}
+  .hero h1{font-size:22px;line-height:1.36}
+  .hero p.sub{font-size:12.5px}
+  .verdict{font-size:12.5px;padding:11px 14px}
+  .card{padding:18px 16px;border-radius:9px}
+  h2{font-size:17px}
+  h3{font-size:14px;margin:22px 0 10px}
+  .tabs-in{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;padding:7px 10px;overflow:visible}
+  .tabs button{padding:9px 5px;font-size:11.5px;border:1px solid var(--line);border-radius:7px;border-bottom-width:1px;text-align:center;line-height:1.3;white-space:normal;min-height:40px;display:flex;align-items:center;justify-content:center}
+  .tabs button.on{border-color:var(--brand);background:var(--brand-l)}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  table{font-size:12px;min-width:460px}
+  th,td{padding:8px 9px}
+  .kpi .v{font-size:21px}
+}
+@media(max-width:380px){ .tabs-in{grid-template-columns:repeat(2,1fr)} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">XIAnYU AD STRATEGY · 2026</span>
+    <h1>义乌 1039 外贸服务｜闲鱼投放策略方案<br><em>个体户注册 · 地址挂靠 · 开户结汇</em></h1>
+    <p class="sub">本方案服务义乌 1039 市场采购贸易代办业务，打法主线：生意本质判断 → 关键词地图 → 商品矩阵 → 盈亏模型 → 合规红线 → 短期/中期执行。所有标题与文案可直接复制上架。</p>
+    <div class="meta">
+      <span>业务：<b>义乌 1039 代办服务</b></span>
+      <span>覆盖：<b>全国获客 · 户籍大陆即可办理</b></span>
+      <span>首期配置：<b>店铺账号 xy199256011617</b></span>
+      <span>版本：<b>V1.0 / 2026-11</b></span>
+    </div>
+    <div class="verdict">
+      <b>核心判断：</b>这是"政策红利 + 强信任代办"的生意——<b>毛利率高（代办人力成本为主）、搜索需求现成（1039 / 结汇 / 个体户注册都是明确搜索词）、竞争密度低</b>。成败取决于三件事：<b>①信任素材</b>（营业执照、场地、流程透明）<b>②专业度人设</b>（懂政策的人，不是中介话术）<b>③合规话术</b>（涉外汇涉税，一句话说错就是下架风险，第 09 章是本方案最重的一章）。
+    </div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tabs-in" id="tabs">
+    <button class="on" data-p="p1">01 方案总览</button>
+    <button data-p="p2">02 生意与人群</button>
+    <button data-p="p3">03 账号配置</button>
+    <button data-p="p4">04 商品矩阵</button>
+    <button data-p="p5">05 内容与文案</button>
+    <button data-p="p6">06 投放策略</button>
+    <button data-p="p7">07 数据优化</button>
+    <button data-p="p8">08 咨询转化</button>
+    <button data-p="p9">09 合规红线</button>
+    <button data-p="p10">10 执行计划</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- ============ 01 ============ -->
+<div class="panel on" id="p1">
+  <div class="card">
+    <h2><span class="n">01</span>方案总览</h2>
+    <p class="desc">一页看懂：这门生意在闲鱼的打法、投多少、怎么验收。</p>
+
+    <h3>1.1 先说清楚：1039 是什么、卖给谁</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:14%">要素</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td><b>业务</b></td><td>义乌 1039 市场采购贸易配套代办：个体户注册、地址挂靠、外汇账户开立辅导、合规收结汇咨询</td></tr>
+          <tr><td><b>政策背景</b></td><td>1039 是海关监管方式代码"市场采购贸易"：针对多品种、小批量、无票小商品出口，增值税免征不退、简化归类申报、可合法收结汇。义乌是全国最早的试点地之一</td></tr>
+          <tr><td><b>核心客群</b></td><td>①外贸 SOHO（有海外客户、无票货物、个人收汇受限）②跨境电商卖家（多平台回款合规）③小商品市场商户（外商采购拼柜）④想做外贸但不懂政策的入门者</td></tr>
+          <tr><td><b>办理条件</b></td><td>户籍地为大陆即可，不限常住地，可远程办理（以实际办理流程为准）</td></tr>
+          <tr><td><b>客单价</b></td><td>咨询 / 资料类 ¥29–99；单项代办（注册 / 挂靠）¥299–699；全流程套餐 ¥999–1,999</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>1.2 为什么这门生意适合投闲鱼</h3>
+    <div class="grid g3">
+      <div class="box" style="border-top:3px solid var(--brand)">
+        <h4>搜索需求现成且明确</h4>
+        <p>"1039""义乌个体户注册""外贸结汇""无票出口"都是<b>带着明确问题来的搜索词</b>。用户不是闲逛，是遇到了具体麻烦：钱收不进来、票开不出来、账户被限。意图强度高于多数品类。</p>
+      </div>
+      <div class="box" style="border-top:3px solid var(--gold)">
+        <h4>服务毛利支撑投放</h4>
+        <p>代办服务以人力成本为主，毛利率显著高于实物电商。<b>单咨询价值高，付费投放能算得过账</b>（第 06 章有完整测算）。</p>
+      </div>
+      <div class="box" style="border-top:3px solid var(--blue)">
+        <h4>竞争密度低、专业度即壁垒</h4>
+        <p>闲鱼上系统化做 1039 的卖家还很少。把政策讲清楚、把流程晒透明，<b>专业度本身就是护城河</b>，不需要拼低价。</p>
+      </div>
+    </div>
+
+    <h3>1.3 关键数字</h3>
+    <div class="grid g4">
+      <div class="kpi"><span class="l">首期商品</span><span class="v">16 条</span><span class="s">单账号全量上架</span></div>
+      <div class="kpi gd"><span class="l">客单价带</span><span class="v">¥29–1,999</span><span class="s">科普引流 → 全流程套餐</span></div>
+      <div class="kpi bl"><span class="l">建议首期预算</span><span class="v">¥2,000</span><span class="s">分四段释放（可扩）</span></div>
+      <div class="kpi rd"><span class="l">首月目标</span><span class="v">30 咨询</span><span class="s">强咨询 12+ · 成交 2–5 单</span></div>
+    </div>
+
+    <h3>1.4 推进节奏：短期与中期</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:14%">阶段</th><th style="width:12%">时间</th><th style="width:34%">核心任务</th><th style="width:18%">要达到什么</th><th>进入下一阶段的标准</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>短期</b><br><span class="tag g">跑通</span></td>
+            <td>第 1–30 天</td>
+            <td>1 个账号、16 条商品分批上架；文案与信任素材测试；预算分四段投放</td>
+            <td>验证"哪些词有流量、哪类内容能建立信任、咨询能不能成交"</td>
+            <td>累计咨询 ≥30（强咨询 ≥12），成交 ≥2 单，点击率 ≥1.5%</td>
+          </tr>
+          <tr>
+            <td><b>中期</b><br><span class="tag b">放大</span></td>
+            <td>第 31–60 天</td>
+            <td>胜出模板复制新业务线（如公司注册、财税咨询）；视数据评估增开账号；商品扩至 24–30 条</td>
+            <td>单号模型跑通，可复制增号</td>
+            <td>月成交 ≥5 单，投放 ROI ≥1.3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info">
+      <b>为什么不排第三个月：</b>涉政策业务的政策细则与平台审核口径都可能变化，且首月数据会直接改变商品结构（哪个业务线最赚钱、哪类词最准）。<b>先跑准 60 天，再定下半年的打法。</b>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 02 ============ -->
+<div class="panel" id="p2">
+  <div class="card">
+    <h2><span class="n">02</span>生意与人群：谁在搜、痛什么、怎么接</h2>
+    <p class="desc">代办服务在闲鱼的打法与实物完全不同：<b>用户带着具体麻烦来搜索</b>，谁的回答更专业、更透明，谁就赢得咨询。所以先看清四类人群各自的痛点与对应商品。</p>
+
+    <h3>2.1 四类核心人群与他们的真实问题</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:16%">人群</th><th style="width:26%">典型处境</th><th style="width:30%">他们搜什么</th><th>对应商品方向</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>外贸 SOHO</b><br><span class="tag r">核心</span></td>
+            <td>有海外客户、能接到单，但货物无票出口、个人账户收外汇受限，钱"进不来也说不清"</td>
+            <td>外贸怎么收外汇、美金结汇、无票出口、个人账户收外汇限额</td>
+            <td>1039 合规结汇方案、个体户注册 + 开户全流程（利润款）</td>
+          </tr>
+          <tr>
+            <td><b>跨境电商卖家</b><br><span class="tag r">核心</span></td>
+            <td>多平台回款，对资金合规有要求，想找一个政策框架内的收款结构</td>
+            <td>跨境电商收款合规、店铺资金结汇、跨境收款政策</td>
+            <td>资金合规咨询、1039 方案评估（高客单）</td>
+          </tr>
+          <tr>
+            <td><b>市场采购商户</b><br><span class="tag y">主力</span></td>
+            <td>义乌及各地小商品市场商户，外商采购、拼柜发货，需要一个能收汇的合规主体</td>
+            <td>市场采购贸易、义乌个体户、1039 注册</td>
+            <td>个体户注册代办、地址挂靠（主力款）</td>
+          </tr>
+          <tr>
+            <td><b>外贸入门者</b><br><span class="tag b">流量</span></td>
+            <td>想做外贸或刚开始做，分不清 1039、0110、9810，被各种说法绕晕</td>
+            <td>1039 是什么、市场采购贸易是什么、外贸新手入门</td>
+            <td>政策科普 / 资料包（低价引流款，贡献曝光与信任）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ok">
+      <b>人群结论决定了商品结构：</b>科普款负责"被搜到 + 建立专业印象"，单品代办款负责"承接明确需求"，全流程套餐负责"赚钱"。三类各司其职——<b>不要试图用一条商品同时服务四类人</b>，标题里词一多，反而哪个都打不中。
+    </div>
+
+    <h3>2.2 搜索词地图：五层词库</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:8%">层级</th><th style="width:13%">词类型</th><th style="width:43%">示例</th><th style="width:12%">搜索量</th><th style="width:12%">竞争度</th><th>策略</th></tr></thead>
+        <tbody>
+          <tr><td><b>L1</b></td><td>政策词</td><td>1039、1039 出口、市场采购贸易、市场采购 政策</td><td class="num">中</td><td class="num">低</td><td><span class="tag r">主力</span> 意图极强，直接对应业务</td></tr>
+          <tr><td><b>L2</b></td><td>业务词</td><td>义乌个体户注册、个体户注册代办、地址挂靠、收结汇（另：外汇账户为灰区词，标题限用 1 个）</td><td class="num">中</td><td class="num">中低</td><td><span class="tag r">主力</span> 转化最高的词</td></tr>
+          <tr><td><b>L3</b></td><td>痛点场景词</td><td>外贸收外汇、美金怎么结汇、无票出口、没有进项发票、跨境收款</td><td class="num">中高</td><td class="num">低</td><td><span class="tag r">主力</span> 量大、用户自己都不知道 1039 能解决</td></tr>
+          <tr><td><b>L4</b></td><td>人群词</td><td>外贸 SOHO、外贸人收款、跨境电商合规</td><td class="num">中</td><td class="num">低</td><td><span class="tag b">补充</span> 用于人群标签款商品</td></tr>
+          <tr><td><b>L5</b></td><td>延伸业务词</td><td>义乌公司注册、个体户转公司、外贸财税咨询</td><td class="num">低</td><td class="num">低</td><td><span class="tag b">测试位</span> 中期第二增长线</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <b>选词逻辑：</b>本项目的词是"问题驱动"（痛点 × 业务），用户带着具体麻烦来搜索。<b>同一个"1039"，用"注册"接的人和用"结汇"接的人，客单差三倍</b>——所以每条商品只解决一个问题，咨询进来才知道往哪个套餐引导。
+    </div>
+
+    <h3>2.3 同行参考：客户已有的两条链接怎么升级</h3>
+    <p>客户现有两条在售链接（1039 个体注册｜地址挂靠 / 外贸小商品出口科普），方向正确。升级点有三处：</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:18%">环节</th><th style="width:34%">现状（推断）</th><th>升级方向</th></tr></thead>
+        <tbody>
+          <tr><td><b>商品数量</b></td><td>2 条，覆盖 2 个词</td><td>扩到 16 条，把 L1–L3 的词分层覆盖完。词覆盖度是这类生意第一杠杆</td></tr>
+          <tr><td><b>信任呈现</b></td><td>标题有业务词，详情信任要素待补</td><td>详情页补齐：营业执照、办公场地实拍、办理流程图、可核验的成功案例（脱敏）</td></tr>
+          <tr><td><b>内容资产</b></td><td>小红书已有爆款笔记（个体户注册成功题材）</td><td>验证了"晒过程 + 晒结果"的内容路线有效，直接平移到闲鱼详情页与说说，图文素材复用</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info">
+      <b>小红书爆款笔记给了一个重要信号：</b>"个体户注册成功"这类<b>结果展示型内容</b>在这个人群里是有效的。闲鱼上对应的做法是：详情页放办理时间线（当天提交 → X 天下证 → 开户 → 首笔结汇），每一步配实拍图。信任是代办生意的转化核心，<b>闲鱼买家默认怀疑你是中介骗子，全部素材都要围绕"拆掉这个怀疑"来设计。</b>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 03 ============ -->
+<div class="panel" id="p3">
+  <div class="card">
+    <h2><span class="n">03</span>账号配置：单账号运营方案</h2>
+    <p class="desc">本期投入 1 个店铺账号，策略是<b>"一个账号打透、跑通后再复制"</b>：用商品分层代替多账号分工，全部数据归因到同一套素材与话术，迭代最快。</p>
+
+    <h3>3.1 账号基本盘</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:18%">项目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td><b>合作账号</b></td><td class="num">xy199256011617</td></tr>
+          <tr><td><b>账号定位</b></td><td>义乌 1039 市场采购贸易服务商：个体户注册 / 地址挂靠 / 收结汇辅导全链路，既懂政策、也能办事</td></tr>
+          <tr><td><b>投放范围</b></td><td><b>全国获客</b>——户籍地为大陆即可办理、不限常住地，标题与详情统一带"全国可办 / 不限地区"表述（以实际办理流程为准）</td></tr>
+          <tr><td><b>商品配置</b></td><td>16 条：KN 层 8 条（政策词 + 痛点词）+ SV 层 8 条（业务词 + 高客单），同号分层覆盖、主词不重复</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info">
+      <b>为什么"一个号"反而要先跑：</b>单账号能把全部咨询、成交数据归因到同一套素材与话术，两周一轮即可迭代出可复制模板。<b>增开账号的前提是单号模型跑通（月成交 ≥3 单），届时按本方案原样复制，再补差异化词域。</b>
+    </div>
+
+    <h3>3.2 人设：像一家"能办事的正规机构"</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:16%">要素</th><th style="width:32%">建议</th><th>参考文案（可直接使用）</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>头像与背景</b></td>
+            <td>营业执照墙 / 办公场景实拍（执照可打码），知识感与服务感兼具</td>
+            <td rowspan="2">义乌外贸服务：1039 政策咨询、个体户注册、地址挂靠、收结汇辅导，全国可办。流程公开透明，每一步做了什么都会同步。不合适的情况会直说。工作时间内消息必回，急单直接说事项。</td>
+          </tr>
+          <tr>
+            <td><b>昵称与调性</b></td>
+            <td>带"1039 / 外贸服务"字样的机构感昵称；忌"XX 姐 / XX 哥"个人 IP 式命名</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="warn">
+      <b>人设三条禁令（本项目涉外汇涉税，执行最严格）：</b>①不自称"官方""指定""授权服务机构"；②不出现"包过""保证下证""保证额度"等承诺；③绝不暗示"无需真实货物也能收汇"——<b>无真实贸易背景的收结汇是外汇违规红线，这一条碰了不只是下架</b>。详见第 09 章。
+    </div>
+
+    <h3>3.3 信任基建：代办服务的关键一层</h3>
+    <p>代办服务的咨询转化率，七成取决于"你像不像正规机构"。以下五项素材在首周就要配齐：</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:22%">信任要素</th><th style="width:40%">做法</th><th>放哪里</th></tr></thead>
+        <tbody>
+          <tr><td><b>营业执照</b></td><td>公司主体执照清晰实拍（可遮注册号后四位）</td><td>详情页第 2 张图 + 主页背景</td></tr>
+          <tr><td><b>场地实拍</b></td><td>义乌办公场地照片 / 短视频，有本地元素</td><td>详情页 + 说说定期发</td></tr>
+          <tr><td><b>流程图</b></td><td>"咨询 → 签协议 → 提交 → 下证 → 开户 → 结汇"时间线图</td><td>详情页第 3 张图</td></tr>
+          <tr><td><b>案例脱敏</b></td><td>成功案例打码截图（执照、结汇回单局部），配办理天数</td><td>详情页 + 说说</td></tr>
+          <tr><td><b>过程记录</b></td><td>平移小红书爆款路线："帮客户办下来了"的记录帖</td><td>说说每周 2–3 条</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ok">
+      <b>小红书爆款笔记的平移价值：</b>客户在小红书已验证"晒注册成功过程"有流量。闲鱼的对应动作不是发帖等流量，而是<b>把过程素材变成商品详情的一部分 + 说说持续更新</b>。闲鱼的说说会进入粉丝feed，是低价维护信任的阵地。
+    </div>
+
+    <h3>3.4 单账号运营纪律</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:16%">维度</th><th>规则</th></tr></thead>
+        <tbody>
+          <tr><td><b>标题主词</b></td><td>16 条主词互不重复：场景词（"1039/市场采购/收外汇"）与服务词（"代办/注册/挂靠"）在同账号内也要错开，避免自我竞争</td></tr>
+          <tr><td><b>首图</b></td><td>知识感（图表/白板）与服务感（执照/场地）两种风格混排，同词商品不用同款封面</td></tr>
+          <tr><td><b>文案结构</b></td><td>政策/痛点款用科普型/答疑型正文，业务/利润款用流程型/对比型正文</td></tr>
+          <tr><td><b>发布节奏</b></td><td>分 2 批上架（KN 层首日、SV 层次日），此后每天新增 ≤2 条、间隔 2 小时以上，不做批量集中发布</td></tr>
+          <tr><td><b>日常养号</b></td><td>每日全量擦亮；每周 2–3 条说说（政策解读 / 过程记录），维持账号活跃度</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 04 ============ -->
+<div class="panel" id="p4">
+  <div class="card">
+    <h2><span class="n">04</span>商品矩阵：16 条可直接上架的链接</h2>
+    <p class="desc">每条标题可直接复制发布（平台 30 字内、用词已按第 09 章风控规则校准）。标价为<b>咨询/起步价</b>，实际按办理内容报价；全部发布于合作账号 xy199256011617。</p>
+
+    <h3>4.1 引流与主力层 · KN-01~08（政策词 + 痛点词）</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:8%">编号</th><th style="width:30%">标题（可直接复制）</th><th style="width:8%">标价</th><th style="width:18%">目标搜索词</th><th style="width:11%">定位</th><th>承接逻辑</th></tr></thead>
+        <tbody>
+          <tr><td><b>KN-01</b></td><td>义乌个体户注册代办｜1039市场采购</td><td class="num">¥299</td><td>义乌个体户注册 · 1039</td><td><span class="tag r">主力</span></td><td>有明确注册需求的直接接</td></tr>
+          <tr><td><b>KN-02</b></td><td>市场采购贸易咨询｜1039政策解读</td><td class="num">¥29.9</td><td>1039 · 市场采购贸易</td><td><span class="tag b">引流</span></td><td>低价咨询，先建立专业信任</td></tr>
+          <tr><td><b>KN-03</b></td><td>外贸收外汇怎么办｜合规结汇方案</td><td class="num">¥99</td><td>外贸收外汇 · 结汇</td><td><span class="tag r">主力</span></td><td>SOHO 最大痛点入口</td></tr>
+          <tr><td><b>KN-04</b></td><td>无票出口怎么合规｜1039出口方案</td><td class="num">¥49</td><td>无票出口 · 没有进项发票</td><td><span class="tag r">主力</span></td><td>痛点词量大、竞争低</td></tr>
+          <tr><td><b>KN-05</b></td><td>外贸SOHO收款｜义乌1039代办</td><td class="num">¥299</td><td>外贸SOHO · 外贸人收款</td><td><span class="tag y">人群</span></td><td>按人群打标签</td></tr>
+          <tr><td><b>KN-06</b></td><td>跨境电商收款合规｜政策方案咨询</td><td class="num">¥99</td><td>跨境电商收款 · 资金合规</td><td><span class="tag y">人群</span></td><td>卖家人群入口</td></tr>
+          <tr><td><b>KN-07</b></td><td>义乌地址挂靠｜个体户注册场地</td><td class="num">¥399</td><td>义乌地址挂靠 · 注册地址</td><td><span class="tag r">主力</span></td><td>明确单项需求，客单高</td></tr>
+          <tr><td><b>KN-08</b></td><td>1039政策资料包｜外贸出口避坑指南</td><td class="num">¥9.9</td><td>1039 资料 · 外贸入门</td><td><span class="tag b">引流</span></td><td>超低价，吃入门流量+养号权重</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>4.2 业务与利润层 · SV-01~08（业务词 + 高客单）</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:8%">编号</th><th style="width:30%">标题（可直接复制）</th><th style="width:8%">标价</th><th style="width:18%">目标搜索词</th><th style="width:11%">定位</th><th>承接逻辑</th></tr></thead>
+        <tbody>
+          <tr><td><b>SV-01</b></td><td>1039全流程代办｜注册结汇全程指导</td><td class="num">¥1,299</td><td>1039 代办 · 全流程</td><td><span class="tag p">利润</span></td><td>利润主力，付费投放主投</td></tr>
+          <tr><td><b>SV-02</b></td><td>义乌个体户注册｜跨境收汇一条龙</td><td class="num">¥999</td><td>个体户注册 · 跨境收汇</td><td><span class="tag p">利润</span></td><td>两步打包，客单高</td></tr>
+          <tr><td><b>SV-03</b></td><td>义乌个体户注册｜执照代办全流程</td><td class="num">¥399</td><td>个体户执照 · 义乌代办</td><td><span class="tag r">主力</span></td><td>明确注册词，全流程透明是服务卖点</td></tr>
+          <tr><td><b>SV-04</b></td><td>外贸结汇辅导｜1039合规收款咨询</td><td class="num">¥599</td><td>结汇辅导 · 合规收款</td><td><span class="tag p">利润</span></td><td>已有主体、只缺结汇路径的客户</td></tr>
+          <tr><td><b>SV-05</b></td><td>市场采购贸易代办｜义乌本地服务</td><td class="num">¥1,099</td><td>市场采购 代办 · 义乌服务</td><td><span class="tag p">利润</span></td><td>强调"本地"，信任加分</td></tr>
+          <tr><td><b>SV-06</b></td><td>外贸资金合规评估｜结汇方案定制</td><td class="num">¥699</td><td>资金合规 · 方案定制</td><td><span class="tag y">服务</span></td><td>面向卖家/SOHO 的咨询切入</td></tr>
+          <tr><td><b>SV-07</b></td><td>个体户转公司｜义乌公司注册代办</td><td class="num">¥899</td><td>个体户转公司 · 义乌公司注册</td><td><span class="tag y">延伸</span></td><td>L5 延伸业务测试位</td></tr>
+          <tr><td><b>SV-08</b></td><td>外贸收款合规咨询｜收汇结汇疑难解答</td><td class="num">¥199</td><td>收款合规咨询 · 结汇问题</td><td><span class="tag r">主力</span></td><td>有疑难问题的精准客</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>4.3 单账号上架节奏</h3>
+    <div class="ok">
+      <b>分 2 批上架：</b>首日 KN 层 8 条（先立住"懂政策"的专业印象）→ 次日 SV 层 8 条。<b>新账号切忌一次性灌 16 条</b>——突发批量发布是平台风控信号，也拉低单条初始权重。每条上架后立即擦亮一次。
+    </div>
+
+    <h3>4.4 价格带与投放关系</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:14%">层级</th><th style="width:16%">标价区间</th><th style="width:34%">商品</th><th style="width:18%">作用</th><th>是否投付费</th></tr></thead>
+        <tbody>
+          <tr><td><b>引流款</b></td><td class="num">¥9.9 – ¥49</td><td>KN-02、KN-04、KN-08</td><td>吃大流量词、建专业印象、养链接权重</td><td><span class="tag y">少量试</span></td></tr>
+          <tr><td><b>主力款</b></td><td class="num">¥99 – ¥399</td><td>KN-01/03/05/06/07、SV-03/08</td><td>承接明确需求，贡献主要咨询量</td><td><span class="tag g">可投</span></td></tr>
+          <tr><td><b>利润款</b></td><td class="num">¥599 – ¥1,299</td><td>SV-01/02/04/05/06/07</td><td>全流程与套餐，付费预算主投对象</td><td><span class="tag g">重点投</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ok">
+      <b>重要结论：</b><b>主力款（¥299–399）就可以投</b>——代办毛利率高，¥299 的单子毛利可能超过 ¥200，单咨询价值足以覆盖咨询成本，付费投放的可选面宽。
+    </div>
+    <div class="warn">
+      <b>标价合规：</b>标价是"起步价/咨询价"，详情首行必须写明"标价为咨询起步价，实际以办理内容报价"。代办服务价格弹性大（是否含地址费、加急、年度维护），<b>不写清楚就是后续纠纷的来源</b>。
+    </div>
+
+    <h3>4.5 标题模板（扩词时直接套用）</h3>
+    <div class="code">
+      <div class="code-h"><span>标题模板 × 5</span><button class="cp">复制</button></div>
+      <pre><b>模板 1｜业务 + 平台词（主力款）</b>
+{业务}代办｜义乌{关联词}
+例：个体户注册代办｜义乌1039
+
+<b>模板 2｜痛点 + 方案（场景款）</b>
+{痛点疑问}｜{方案关键词}
+例：外贸收外汇怎么办｜合规结汇方案
+
+<b>模板 3｜人群 + 业务（人群款）</b>
+{人群}{需求}｜{服务}
+例：外贸SOHO收款｜义乌1039代办
+
+<b>模板 4｜政策 + 形式（引流款）</b>
+{政策词}{交付物}｜{限定}
+例：1039政策资料包｜外贸出口避坑指南
+
+<b>模板 5｜流程 + 卖点（利润款）</b>
+{业务全称}｜{核心卖点}
+例：1039全流程代办｜注册结汇全程指导
+
+<i>使用规则：</i>
+· "1039""市场采购"等核心词在前 10 字内
+· 一条商品只打一个意图；痛点词与业务词不混用
+· 全文 ≤30 字；不用"最专业""第一""保证"类词
+· 同账号内主词不重复，避免自我竞争</pre>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 05 ============ -->
+<div class="panel" id="p5">
+  <div class="card">
+    <h2><span class="n">05</span>内容与文案：正文模板与封面规范</h2>
+    <p class="desc">代办服务的内容重心：<b>封面解决"像不像正规机构"，正文解决"你懂不懂政策"</b>。以下三套正文可直接复制，封面按规范补齐。</p>
+
+    <h3>5.1 正文三套模板（按商品层分配，避免同质化）</h3>
+    <div class="code">
+      <div class="code-h"><span>模板 1 · 政策科普型（配 KN-02/04/08）</span><button class="cp">复制</button></div>
+      <pre>1039 到底是什么？用大白话讲一遍。
+
+1039 是海关的一种监管方式代码，全名"市场采购贸易"。
+它是国家为"多品种、小批量、无票小商品出口"专门设的政策。
+
+它解决三个实际问题：
+
+一、没发票的货也能合规出口。
+小商品采购来源杂，很多拿不到进项发票，一般贸易走不通，
+1039 在政策上就是为这种情况设计的。
+
+二、增值税免征不退。
+按现行政策，1039 方式出口的货物增值税免征不退，
+不用为凑发票发愁（具体以海关税务最新政策为准）。
+
+三、能合规收外汇、结汇。
+以个体户名义开户收汇，钱走得清楚，不再依赖不靠谱的渠道。
+这一点是外贸人最关心的，也是最容易走弯路的地方。
+
+什么人适合：
+・外贸 SOHO，客户有了，收汇和出口没理顺
+・小商品生意，货杂、单小、无票
+・跨境电商卖家，想把资金流理合规
+
+不适合什么情况：
+・有完整进项票的工厂型出口（一般贸易更合适）
+・没有真实贸易背景的想法——这个别问，政策不允许
+
+我人在义乌，做这边的代办服务，注册、地址、开户、结汇都会。
+有具体问题可以先聊，能说明白的都免费说明白。</pre>
+    </div>
+
+    <div class="code">
+      <div class="code-h"><span>模板 2 · 流程透明型（配 SV-01/03/05）</span><button class="cp">复制</button></div>
+      <pre>义乌个体户 + 1039，从注册到结汇的完整流程。
+
+很多人关心流程和周期，一次说清楚：
+
+第一步｜确认情况
+聊清楚你的业务形态：卖什么、走什么物流、大概体量。
+不是所有人都要走 1039，不合适我会直说。
+
+第二步｜注册个体户
+提供身份证信息，名称核准后提交设立登记，
+下证后统一社会信用代码下来，执照可邮寄。
+（时间以实际办理为准，我们会同步每一步进度）
+
+第三步｜地址与开户
+注册地址可提供；执照下来后指导开立外汇相关账户。
+
+第四步｜收汇结汇
+按真实贸易背景报关收汇，
+每一笔钱对应真实的出口，走的是政策内的通道。
+
+费用结构，一次说清：
+・注册代办：标价为起步价，含服务的部分下单前逐项确认
+・地址费用：按年，具体看方案
+・没有任何"办下来再加"的隐藏费用
+
+几个大家最关心的问题：
+・人在外地可以办，全程线上配合，执照邮寄
+・每一步我们做了什么、到哪一步了，都会同步
+・需要真实贸易背景，这是政策底线，我们不接纯空壳的需求
+
+义乌本地服务，欢迎视频看场地看执照。
+有具体业务，直接说情况，我先给你判断适不适合。</pre>
+    </div>
+
+    <div class="code">
+      <div class="code-h"><span>模板 3 · 痛点答疑型（KN/SV 层通用，配 KN-03/06、SV-04/08）</span><button class="cp">复制</button></div>
+      <pre>外贸收款，最常被问的六个问题。
+
+一、"个人账户收外汇，是不是迟早出问题？"
+长期、频繁、来源说不清的个人收汇，确实不是长久之计。
+1039 的意义就是给你一个合规主体，钱走对通道。
+
+二、"我没有发票，是不是不能出口？"
+1039 政策本来就是为无票小商品出口设计的，
+增值税免征不退（以最新政策为准），这是它的核心价值之一。
+
+三、"我在外地，能办吗？"
+户籍大陆即可，人不用过来，流程线上配合。
+
+四、"结汇有没有额度？"
+按真实贸易背景申报，单票报关有上限要求，
+具体额度以海关和外汇的最新规定为准——
+凡是拍胸脯说"随便结"的，你反而要小心。
+
+五、"会不会很麻烦？"
+流程是固定的：注册 → 开户 → 报关收汇。
+麻烦点在第一次理顺，理顺之后就是重复执行。
+
+六、"你们和XX中介有什么区别？"
+不承诺办不到的事，费用结构提前说清，
+每一步进度同步。可以视频看执照看场地。
+
+有具体业务场景，直接留言或私信说情况，
+我先帮你判断适不适合走 1039，不合适也会告诉你为什么。</pre>
+    </div>
+    <div class="note">
+      <b>三套模板的共同点：敢说"不合适"。</b>代办生意的信任来自"这个人不忽悠我"。<b>每套正文都保留了"不合适我会直说""没有真实贸易背景不接"这类表述</b>——它筛掉的本来就是不会成交的用户，换来的是留下的人高转化。这不是风格，是策略。
+    </div>
+
+    <h3>5.2 封面规范：两类风格各配一半</h3>
+    <div class="grid g2">
+      <div class="box" style="border-left:3px solid var(--brand)">
+        <h4>风格 A · 知识感（政策/痛点款）</h4>
+        <ul>
+          <li>底图：白板 / 笔记 / 政策文件示意，画面干净</li>
+          <li>文字：问题式大字，如 <code>外贸收外汇怎么办？</code></li>
+          <li>副行：<code>1039 政策 · 一次说清</code></li>
+          <li>色调：深蓝底 + 白字，资讯感</li>
+        </ul>
+      </div>
+      <div class="box" style="border-left:3px solid var(--gold)">
+        <h4>风格 B · 服务感（业务/利润款）</h4>
+        <ul>
+          <li>底图：营业执照（打码）+ 办公场地实拍</li>
+          <li>文字：服务式大字，如 <code>义乌个体户注册</code></li>
+          <li>副行：<code>本地代办 · 流程透明</code></li>
+          <li>色调：暖白 + 金色点缀，机构感</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tw" style="margin-top:14px">
+      <table>
+        <thead><tr><th style="width:16%">规范项</th><th style="width:44%">要求</th><th>原因</th></tr></thead>
+        <tbody>
+          <tr><td><b>尺寸</b></td><td>800×800（1:1），信息在中心 720×720 内</td><td>平台首图会裁切边缘</td></tr>
+          <tr><td><b>必备元素</b></td><td>核心词大字 + 一行信任点（本地服务 / 流程透明 / 政策解读）</td><td>搜索结果里 1 秒定生死</td></tr>
+          <tr><td><b>禁止项</b></td><td>不放"官方指定"类表述、不放 PS 的证书红章、不出现二维码联系方式、不用"保证下证"字样</td><td>资质类与承诺类风险，见第 09 章</td></tr>
+          <tr><td><b>张数</b></td><td>每条商品 5–6 张：封面 + 执照打码图 + 流程时间线 + 场地实拍 + 常见问题卡</td><td>代办详情页的图就是信任本身</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info">
+      <b>封面素材生产线：</b>采用"实拍底图 + 程序化叠字"方式制作，可批量产出两种风格各 4 张（共 8 张），保证文字 100% 准确、风格统一，后续按需补做即可。
+    </div>
+
+    <h3>5.3 内容测试排布</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:16%">对照</th><th style="width:28%">A 组</th><th style="width:28%">B 组</th><th>看什么</th></tr></thead>
+        <tbody>
+          <tr><td><b>对照一</b></td><td>KN-01 用知识感封面</td><td>同一商品用服务感封面</td><td>同城同价比点击率，决定后续封面路线</td></tr>
+          <tr><td><b>对照二</b></td><td>痛点标题（KN-03 收外汇怎么办）</td><td>业务标题（SV-04 结汇辅导）</td><td>同类业务两种标题的咨询量差，判断词取向</td></tr>
+          <tr><td><b>对照三</b></td><td>科普款 KN-02（¥29.9）</td><td>业务款 KN-01（¥299）</td><td>低价引流款带来的咨询，最终成交去向哪个套餐</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 06 ============ -->
+<div class="panel" id="p6">
+  <div class="card">
+    <h2><span class="n">06</span>投放策略：这个品类，付费能算得过账</h2>
+    <p class="desc">基于「超级擦亮」的真实机制，本品类盈亏模型健康：<b>毛利高，咨询价值高，付费投放可以打平甚至为正</b>。</p>
+
+    <h3>6.1 参数设置</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:16%">可调项</th><th style="width:38%">选项</th><th style="width:16%">建议</th><th>理由</th></tr></thead>
+        <tbody>
+          <tr><td><b>推广目标</b></td><td>曝光 / 浏览 / 关注收藏 / <b>咨询</b> / 订单</td><td><span class="tag g">咨询量</span></td><td>代办服务必然先咨询，直接优化咨询最接近成交</td></tr>
+          <tr><td><b>计划类型</b></td><td>套餐擦亮 / <b>自定义擦亮</b></td><td><span class="tag g">自定义</span></td><td>套餐不可控目标与出价</td></tr>
+          <tr><td><b>出价方式</b></td><td><b>控成本投放</b> / 快速起量</td><td><span class="tag g">控成本</span></td><td>需要精细核算，不烧快钱</td></tr>
+          <tr><td><b>日预算</b></td><td>¥50 / ¥150 / 自定义</td><td><span class="tag y">¥50 起</span></td><td>先验证再放量</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ok">
+      <b>老推论依然成立：平台没有定向，"定向"由商品标题完成。</b>搜"外贸收外汇"的人只会看到标题里带这个词的商品——<b>词铺错，出价再高也没用；词铺对，自然流量就已经能出咨询。</b>所以第 04 章的 16 条词覆盖是投放的地基。
+    </div>
+
+    <h3>6.2 盈亏模型：为什么这个品类值得投</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:30%">测算步骤</th><th style="width:22%">计算</th><th style="width:16%">结果</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>首期付费预算</td><td>—</td><td class="num">¥2,000</td><td>与首期条件一致，可扩</td></tr>
+          <tr><td>可购点击</td><td>2,000 ÷ ¥3.5</td><td class="num">≈ 570 次</td><td>CPC 按 ¥3.5 估；B 端词竞争低于消费品类</td></tr>
+          <tr><td>带来咨询</td><td>570 × 6%</td><td class="num">≈ 34 个</td><td>点击到咨询 6% 偏保守；痛点词的咨询意愿强</td></tr>
+          <tr><td>带来成交</td><td>34 × 15%</td><td class="num">≈ 5 单</td><td>代办决策慢但信任后成交率高，按 15% 估</td></tr>
+          <tr><td>客单与毛利</td><td>¥1,000 客单 × 60%</td><td class="num">毛利 ≈ ¥3,000</td><td>人力成本为主，按 60% 估，需以实际成本校准</td></tr>
+          <tr class="sum"><td>付费部分结论</td><td>投入 2,000 vs 毛利 3,000</td><td class="num">ROI ≈ 1.5</td><td><b>付费本身可为正</b>，叠加自然流量后更健康</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="warn">
+      <b>两个前提必须诚实标注：</b>①60% 毛利率与 15% 成交率是<b>经验假设，需用真实成本与前 30 天实际数据替换</b>；②模型成立依赖"咨询质量"——如果首响慢、答不专业，点击到咨询与成交两个率会同时塌掉，模型就不成立。<b>所以第 08 章的话术与第 03 章的信任基建，是投放模型的一部分，不是配套装饰。</b>
+    </div>
+
+    <h3>6.3 预算分配：分四段释放</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:12%">阶段</th><th style="width:12%">时间</th><th style="width:12%">金额</th><th style="width:14%">日预算</th><th style="width:26%">投什么</th><th>要回答的问题</th></tr></thead>
+        <tbody>
+          <tr><td><b>第 1 段</b></td><td>第 1–7 天</td><td class="num">¥0</td><td class="num">—</td><td>16 条全上架，纯自然流</td><td>哪些词能出曝光？内容能否建立信任？</td></tr>
+          <tr><td><b>第 2 段</b></td><td>第 8–17 天</td><td class="num">¥500</td><td class="num">¥50/天</td><td>只投 1 条主力款（KN-03 或 SV-04，痛点强、客单适中）</td><td>本品类真实咨询成本是多少？</td></tr>
+          <tr><td><b>第 3 段</b></td><td>第 18–27 天</td><td class="num">¥1,000</td><td class="num">¥100/天</td><td>投 2 条：跑通的那条 + 1 条利润款 SV-01</td><td>高客单款的咨询成本能否接受？</td></tr>
+          <tr><td><b>第 4 段</b></td><td>第 28 天起 / 次月</td><td class="num">¥500</td><td class="num">按需</td><td>只加注 ROI 为正的计划；全部不达标则留到次月</td><td>值不值得放量？</td></tr>
+          <tr class="sum"><td colspan="2">合计</td><td class="num">¥2,000</td><td class="num">—</td><td colspan="2">每段以上一段数据为释放前提</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <b>投放对象选择逻辑（按咨询价值投）：</b>主力款（¥99–399）与利润款（¥599+）都可投，<b>引流款（¥9.9–49）不投</b>：它的角色是自然流量与养号，付费买它点击的性价比低。
+    </div>
+
+    <h3>6.4 每日操作与停投标准</h3>
+    <div class="grid g2">
+      <div class="box">
+        <h4>每日节奏（固定 SOP）</h4>
+        <ul>
+          <li><b>09:30</b> 看昨日数据：跑满无咨询 → 降出价 10%</li>
+          <li><b>13:00</b> 看上午 CPC：超预估 30% → 降 10–15%</li>
+          <li><b>17:30</b> 看预算余额，保障晚高峰在线</li>
+          <li><b>21:00</b> 流量高峰值守，5 分钟内首响</li>
+          <li><b>次日 10:00</b> 完整漏斗复盘；单项偏差 >30% 才动</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h4>立即停投的五种情况</h4>
+        <ul>
+          <li>单计划 3 天 0 咨询且花费 >¥80 → 换封面重开</li>
+          <li>咨询成本 > 单咨询价值 × 1.5 持续 3 天 → 停</li>
+          <li>有咨询 0 成交且连续 5 个流失于信任问题 → 停投补信任素材</li>
+          <li>商品出现"风险商品"提示 → 立即停，先合规</li>
+          <li>履约端接不住（办理排期爆满）→ 停投</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">
+      <b>调价纪律（实操经验）：</b>一天最多调一次、单次 ≤15%。频繁调整会让系统反复重新学习。<b>数据没异常就不动。</b>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 07 ============ -->
+<div class="panel" id="p7">
+  <div class="card">
+    <h2><span class="n">07</span>数据优化</h2>
+    <p class="desc">B 端服务的数据逻辑和卖货完全不同：咨询少但单条咨询值钱，且咨询到成交有 1–14 天决策周期。数据优化抓两条线：<b>商品线（周维度淘汰）</b>和<b>咨询线（日维度记录）</b>。</p>
+
+    <h3>7.1 五层漏斗与基准值（B 端版）</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:16%">层级</th><th style="width:30%">指标</th><th style="width:22%">B 端参考基准</th><th>不达标看哪里</th></tr></thead>
+        <tbody>
+          <tr><td><b>曝光</b></td><td>商品被搜到 / 推荐次数</td><td>新商品 3 天内 ≥100</td><td>标题词冷门 → 换词重发；类目放错 → 调类目</td></tr>
+          <tr><td><b>浏览</b></td><td>曝光→点击进入详情</td><td>点击率 ≥8%</td><td>封面不吸引 / 标题与封面不匹配 → 换封面</td></tr>
+          <tr><td><b>咨询</b></td><td>浏览→"想要"/私聊</td><td>咨询率 ≥3%</td><td>详情没讲清流程 / 标价吓人 → 补流程图、标价改咨询价</td></tr>
+          <tr><td><b>意向</b></td><td>咨询→要资料清单 / 问价格明细</td><td>意向率 ≥40%</td><td>首响太慢 / 回答含糊 → 修话术（见第 08 章）</td></tr>
+          <tr><td><b>成交</b></td><td>意向→付款</td><td>周期 1–14 天，成交率 ≥20%</td><td>信任不够 → 补案例与分步付款；报价失焦 → 给明细单</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <b>B 端服务的数据逻辑与卖货不同：</b>卖货是"当天咨询当天定"，1039 客户是"先攒信任、月底再办"。所以 <b>咨询线不能只盯成交，要盯"强咨询"</b>：问"需要什么材料""多少钱全包""多久能办好"算强咨询；只问"是什么"的算弱咨询。<b>强咨询 ≥3 条/周</b>就该继续投，哪怕暂时没成交。
+    </div>
+
+    <h3>7.2 每日数据记录表（直接复制使用）</h3>
+    <div class="code">
+      <div class="code-h"><span>1039 日报模板</span><button class="cp">复制</button></div>
+      <pre>日期：__  付费花费：__  自然/付费分开记
+
+【商品线】每条上架商品记一行（16 条太多就记 Top8 + 新发品）
+商品编号 | 曝光 | 浏览 | 点击率% | 咨询数 | 强咨询数 | 动作
+
+【咨询线】（这是 B 端的核心，逐条记）
+# | 来源商品 | 问题类型(强/弱) | 已回复 | 意向阶段(要清单/比价/约时间) | 备注
+
+【今日重点】今天最需要改进的一项：__</pre>
+    </div>
+
+    <h3>7.3 商品淘汰机制（7 天一轮）</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:26%">7 天数据表现</th><th style="width:34%">诊断</th><th>动作</th></tr></thead>
+        <tbody>
+          <tr><td>曝光高、点击率 &lt;8%</td><td>封面/标题不符</td><td>只换封面，标题微调，其余不动</td></tr>
+          <tr><td>点击率 OK、咨询率 &lt;3%</td><td>详情/标价劝退</td><td>详情首屏加流程图；标价改"¥29.9 起"</td></tr>
+          <tr><td>曝光 &lt;50 持续 5 天</td><td>词太冷或权重低</td><td>擦亮+重发到新商品位；仍无起色直接删</td></tr>
+          <tr><td>有强咨询但 0 成交（≥5 个）</td><td>转化端问题，不是商品问题</td><td><b>商品别动</b>，去修第 08 章话术与信任素材</td></tr>
+          <tr><td>被提示"风险商品"</td><td>触碰平台敏感词</td><td>立即下架，对照第 09 章改写后再上</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="warn">
+      <b>淘汰纪律：</b>账号常驻 <b>16 条</b>，每周日复盘，末位 2 条换血（下架重写再发）。宁可少而精——零曝光商品会拉低账号整体权重，若过半商品零曝光，说明选词有问题，先回 2.2 词库重查。
+    </div>
+  </div>
+</div>
+
+<!-- ============ 08 ============ -->
+<div class="panel" id="p8">
+  <div class="card">
+    <h2><span class="n">08</span>咨询转化</h2>
+    <p class="desc">外贸人咨询时脑子里是六个固定问题。首响 30 分钟内 + 六问答对 5 个以上，意向率能翻倍。这一章是全方案的<b>收银台</b>：商品和投放做得再好，话术不行就全部白费。</p>
+
+    <h3>8.1 外贸人高频六问 · 应答卡</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:24%">问题</th><th style="width:44%">应答要点</th><th>加分动作</th></tr></thead>
+        <tbody>
+          <tr><td><b>① 我人在外地能办吗？</b></td><td>核心只看户籍地，大陆户籍即可，全程线上提交材料，办结邮寄到手（以实际流程为准）</td><td>直接发《材料清单》：身份证 + 手机号，10 分钟说完流程</td></tr>
+          <tr><td><b>② 结汇额度有多少？有限制吗？</b></td><td>1039 单票报关限额口径（≤15 万美元）讲清楚；额度随政策会调整，<b>以办理时最新政策为准</b></td><td>发一张"收结汇合规路径图"，讲清银行渠道</td></tr>
+          <tr><td><b>③ 需要本人到义乌吗？</b></td><td>正常流程不需要；个别银行开户环节如需面签，提前告知并给替代方案</td><td>主动说明哪些环节可能要视频核验，先讲清=信任</td></tr>
+          <tr><td><b>④ 税怎么交？</b></td><td>1039 增值税免征不退，个税核定征收，<b>具体税率与申报以最新政策及税务口径为准</b>，协助对接</td><td>不给"具体省多少"的数字承诺，给"政策依据截图"</td></tr>
+          <tr><td><b>⑤ 会不会是骗局？</b></td><td>讲清分步付款：注册环节一付、开户环节一付；可视频看办公场地、看已办案例（脱敏）</td><td>发营业执照 + 办公环境实拍，主动提"先小步验证"</td></tr>
+          <tr><td><b>⑥ 和找黄牛 / 地下钱庄有什么区别？</b></td><td>银行正规渠道、贸易背景真实留痕、资金路径可查；钱庄换汇是外汇违规，出事的是客户自己</td><td>这句<b>主动讲</b>，是全案最强信任点</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>8.2 话术节奏（先诊断、再报价）</h3>
+    <div class="code">
+      <div class="code-h"><span>咨询应答节奏</span><button class="cp">复制</button></div>
+      <pre>第 1 步 · 30 秒内首响（哪怕先发自动回复）
+"在的～您是想了解 1039 个体户注册，还是收结汇这块？"
+
+第 2 步 · 先问背景，再给方案（不上来就报价）
+"方便问下您现在是什么情况？①已有海外客户收汇受限 ②想做出口没头绪 ③平台回款要合规——情况不同方案差很多"
+
+第 3 步 · 按情况给对应路径 + 材料清单
+对号入座发对应说明，同步发《办理材料清单》和《流程时间表》
+
+第 4 步 · 报价报"明细"不报"一口价"
+注册 XXX + 地址挂靠 XXX + 开户辅导 XXX，分项列出，哪项不需要划掉
+
+第 5 步 · 逼单不是催，是"给确定性"
+"您这周定的话，本周内能走完注册环节，下周就可以约开户。材料我先发您准备，不用急着付。"</pre>
+    </div>
+    <div class="note">
+      <b>B 端逼单核心是"降低决策风险"而不是"制造紧迫感"：</b>分步付款、先办注册再谈开户、材料先行。客户拖着不付，九成是还没过"⑤骗局疑虑"，去补信任素材，不要降价。
+    </div>
+
+    <h3>8.3 转化工具包（首周配齐，随聊随发）</h3>
+    <div class="grid g2">
+      <div class="box"><b>《办理材料清单》</b><br>一页纸：身份证、户籍说明、联系方式，标注每项用途。发出去 = 专业度直接立住。</div>
+      <div class="box"><b>《流程时间表》</b><br>注册→银行开户→收结汇，每步写清"几天、需要客户做什么"。周期透明是 B 端最强转化器。</div>
+      <div class="box"><b>《收结汇合规路径图》</b><br>一张图讲清"客户外币→1039 主体→银行结汇→人民币到账"，配政策依据文字版。</div>
+      <div class="box"><b>脱敏案例 3 条</b><br>"深圳 SOHO 王先生，收汇受限→2 周办结"式短案例（隐去可识别信息），专治疑虑型客户。</div>
+    </div>
+
+    <h3>8.4 话术禁忌</h3>
+    <div class="warn">
+      <b>咨询聊天里绝对不说：</b>①"包过 / 保证下证 / 保证额度"（承诺类红线）②"免税 / 0 税"（涉税红线，说"免征不退 + 核定征收，以最新政策为准"）③"没有货也能收汇 / 帮你走个流水"（外汇违规红线，遇这种请求直接拒绝并说明原因）④不主动提"换汇 ""汇率优惠"等字眼。完整红线清单见第 09 章。
+    </div>
+  </div>
+</div>
+
+<!-- ============ 09 ============ -->
+<div class="panel" id="p9">
+  <div class="card">
+    <h2><span class="n">09</span>合规红线</h2>
+    <p class="desc">本项目同时踩在<b>平台规则、外汇管理、税务宣传</b>三条线上，是全案最重的一章。原则一句话：<b>讲政策、讲流程、讲"以最新规定为准"；不承诺结果、不教规避、不碰无贸易背景的资金。</b>合规做扎实，反而全网竞品都在乱说时，你就是最可信的那个。</p>
+
+    <h3>9.1 表述红线对照表（商品标题 / 详情 / 聊天通用）</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:28%">❌ 禁用表述</th><th style="width:20%">红线类型</th><th>✅ 替代写法</th></tr></thead>
+        <tbody>
+          <tr><td>"免税"" 0 税"" 包税"" 合理避税"</td><td>涉税宣传</td><td>"增值税免征不退（政策口径）、个税核定征收，具体以最新政策为准"</td></tr>
+          <tr><td>"无需真实货物也能收汇""帮忙走流水""空壳收汇"</td><td>外汇违规（最重）</td><td>"需真实贸易背景，协助规范申报收结汇"；<b>无贸易背景的请求直接拒绝</b></td></tr>
+          <tr><td>"换汇 "" 私下换汇 "" 汇率优惠"" 比银行划算"</td><td>外汇 + 平台双重红线</td><td>"银行正规渠道收结汇，全程留痕可查"</td></tr>
+          <tr><td>"保证下证 "" 保证额度 "" 100% 办下来"</td><td>承诺类（广告法）</td><td>"全程协助办理，流程透明，进度随时同步"</td></tr>
+          <tr><td>"官方 "" 指定 "" 授权服务机构"" 政府合作"</td><td>资质类（广告法）</td><td>"本地代办机构，X 年服务经验"（可证实的表述）</td></tr>
+          <tr><td>"最专业 "" 全网最低 "" 第一"</td><td>广告法极限词</td><td>删除或改为客观描述</td></tr>
+          <tr><td>"税局有人 "" 关系办理 "" 内部渠道"</td><td>暗示腐败 + 涉税</td><td>"标准化流程代办"</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>9.2 闲鱼平台风控词规避（标题 / 详情 / 图片）</h3>
+    <p>除 9.1 的表述红线外，闲鱼平台自身对金融类词汇有严格风控。<b>原则：标题最多保留 1 个灰区词、绝不叠加；解释性内容放详情正文。</b></p>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:12%">风险级</th><th style="width:40%">词例</th><th>处理方式</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag r">禁用</span></td><td>换汇、汇率优惠、代收代付、走账、平账、买票 / 开票、退税</td><td>标题、详情、图片一律不出现；聊天中也不讨论</td></tr>
+          <tr><td><span class="tag y">灰区</span></td><td>外汇、开户、结汇、美金 / 美元 / 外币</td><td>标题最多 1 个，优先用"收汇 / 跨境收款 / 收结汇辅导 / 账户指导"替代</td></tr>
+          <tr><td><span class="tag y">灰区</span></td><td>营业执照代办（类目管控）</td><td>类目放商务/企业服务咨询，标题用"注册代办 / 登记咨询"表述</td></tr>
+          <tr><td><span class="tag r">禁用</span></td><td>微信号 / 电话 / 二维码 / "加V"</td><td>标题、详情、图片一律不出现，全部站内沟通</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <b>按此规则已校准的标题：</b>SV-01"注册开户结汇辅导"→"注册结汇全程指导"（去掉灰区词"开户"）；SV-02"外汇账户"→"跨境收汇"；SV-08"外汇合规咨询"→"外贸收款合规咨询"；SV-03 去掉承诺色彩的"下证快"。
+    </div>
+    <div class="warn">
+      <b>"收外汇 / 收汇"属可测试词：</b>现有在售链接在用且未被风控，可保留，但每条标题只出现一次；一旦收到"风险商品"提示，立即将该条标题中的"外汇"替换为"跨境收款"后重发。
+    </div>
+
+    <h3>9.3 商品层面合规（上架前逐条过）</h3>
+    <div class="grid g2">
+      <div class="box"><b>类目选择</b><br>放"商务/企业服务咨询"类目。<b>绝不碰</b>金融、理财、贷款、支付相关类目——收结汇咨询≠金融业务，类目选错直接被判风险商品。</div>
+      <div class="box"><b>标题与详情</b><br>不出现"外汇兑换""换汇""汇率"字样；用"收外汇""收结汇""跨境收款合规咨询"等合规表述；每条详情写明"需真实贸易背景"。</div>
+      <div class="box"><b>价格标示</b><br>标价为咨询起步价，详情首行注明"实际以办理内容报价"，避免价格欺诈投诉。</div>
+      <div class="box"><b>图片素材</b><br>不用政府 logo、国徽、红旗等元素；不 P 任何"授权书""资质证书"；实拍办公环境即可。</div>
+    </div>
+
+    <h3>9.4 聊天与履约层面合规</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:24%">环节</th><th>规则</th></tr></thead>
+        <tbody>
+          <tr><td><b>敏感请求处理</b></td><td>客户问"没货能不能收""帮我走笔流水"——<b>明确拒绝</b>并解释这是外汇违规："没有真实贸易背景的我们办不了，这是红线，办了出事的是您的账户"。拒绝话术本身就是信任广告。</td></tr>
+          <tr><td><b>平台内聊天纪律</b></td><td>不在闲鱼聊天里发微信号引流（限流封号风险）；重要信息用平台图片形式发送；报价留平台记录。</td></tr>
+          <tr><td><b>客户资料真实性</b></td><td>只接真实身份与真实贸易背景客户；发现资料造假（假户籍、代注册他人身份）立即终止并退款。</td></tr>
+          <tr><td><b>政策时效</b></td><td>所有涉及额度、税率的说明，话术统一带"以办理时最新政策为准"，并每月核对一次口径更新商品详情。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>9.5 出事怎么办：风险应对</h3>
+    <div class="grid g2">
+      <div class="box"><b>商品被下架</b><br>先对照 9.1 自查表述，改写后重新上架并申诉；同款内容勿原样重发。</div>
+      <div class="box"><b>账号被限流</b><br>停发新商品 3–5 天，只做擦亮和咨询回复；恢复后再上新。</div>
+      <div class="box"><b>收到违规通知</b><br>保存截图、按提示申诉；涉及外汇类判罚的，删掉全部相关表述再整改。</div>
+      <div class="box"><b>被同行投诉</b><br>合规经营是最好的护身符：所有承诺留证（聊天记录里没有过度承诺），投诉不成立。</div>
+    </div>
+
+    <h3>9.6 上线前合规自查清单</h3>
+    <div class="code">
+      <div class="code-h"><span>合规 Checklist（每条商品上架前过一遍）</span><button class="cp">复制</button></div>
+      <pre>□ 类目 = 商务/企业服务咨询（非金融类）
+□ 标题无"换汇/代收代付/走账/退税"等禁用词
+□ 标题灰区词（外汇/开户/结汇/美金）≤1 个
+□ 标题、详情、图片无微信号/电话/二维码
+□ 详情无"保证/官方/第一/包过"字样
+□ 详情含"需真实贸易背景"表述
+□ 详情含"标价为咨询起步价"说明
+□ 无极限词（最/第一/100%/包过）
+□ 涉税表述均为"免征不退+核定征收，以最新政策为准"
+□ 图片无政府标识、无伪造证书
+□ 我已确认：不接无贸易背景的资金请求</pre>
+    </div>
+    <div class="warn">
+      <b>底线声明：</b>本方案所有话术与素材设计均以合规表述为准绳。任何人（包括客户）要求突破以上红线，一律拒绝——<b>这一单不赚，比账户被封、客户资金被冻划算得多。</b>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 10 ============ -->
+<div class="panel" id="p10">
+  <div class="card">
+    <h2><span class="n">10</span>执行计划</h2>
+    <p class="desc">只拆两段：<b>短期（第 1–30 天，按周）</b>和<b>中期（第 31–60 天，按月）</b>。每周设"过关指标"，没过关不进下一阶段——不堆动作，只看验收。</p>
+
+    <h3>10.1 总览</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:18%">阶段</th><th style="width:30%">主题</th><th style="width:22%">预算</th><th>过关指标</th></tr></thead>
+        <tbody>
+          <tr><td><b>短期 W1</b><br>第 1–7 天</td><td>基建：账号 + 16 条商品全上架</td><td>¥0</td><td>16 条全部过审；≥5 条有曝光</td></tr>
+          <tr><td><b>短期 W2</b><br>第 8–14 天</td><td>点火：首轮淘汰 + 付费开跑</td><td>¥500</td><td>出现首条强咨询</td></tr>
+          <tr><td><b>短期 W3</b><br>第 15–21 天</td><td>打磨：话术 + 首单冲刺</td><td>¥700</td><td>周强咨询 ≥3；<b>首单成交</b></td></tr>
+          <tr><td><b>短期 W4</b><br>第 22–30 天</td><td>收敛：确定跑通组合，月复盘</td><td>¥800</td><td>月成交 ≥2 单；算清咨询成本</td></tr>
+          <tr><td><b>中期 M2</b><br>第 31–60 天</td><td>复制：扩词扩品 + 预算加码 + 沉淀 SOP</td><td>按 ROI 动态</td><td>月成交 ≥5 单；付费 ROI ≥1.3</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>10.2 短期：第 1–30 天（按周拆）</h3>
+    <div class="grid g2">
+      <div class="box">
+        <b>W1（第 1–7 天）｜基建周 · 预算 ¥0</b>
+        <ul>
+          <li>账号 xy199256011617 完成实名 + 人设搭建（按 3.1–3.2）</li>
+          <li>16 条商品分 2 批上架（KN 层首日、SV 层次日，按第 04 章矩阵）</li>
+          <li>每条商品过一遍 9.6 合规 Checklist 再发布</li>
+          <li>每日擦亮全部商品；发布 2 条"1039 政策科普"动态养权重</li>
+          <li>转化工具包 4 件（8.3）配齐</li>
+        </ul>
+        <b>✅ 过关指标：</b>16 条全过审、≥5 条有曝光、0 违规提示<br>
+        <b>未过关动作：</b>违规商品改写重发；零曝光商品换标题重上
+      </div>
+      <div class="box">
+        <b>W2（第 8–14 天）｜点火周 · 预算 ¥500</b>
+        <ul>
+          <li>启动付费：KN-01（政策咨询引流款）¥50/天 × 10 天</li>
+          <li>周日首轮数据复盘，按 7.3 淘汰机制换血 2 条</li>
+          <li>自然流侧：观察哪类词带来浏览，记录进日报</li>
+          <li>所有咨询按 8.2 节奏应答，逐条记录咨询类型</li>
+        </ul>
+        <b>✅ 过关指标：</b>出现首条强咨询（问材料/价格明细）<br>
+        <b>未过关动作：</b>点击率&lt;8% 的换封面；咨询率&lt;3% 的改详情首屏
+      </div>
+      <div class="box">
+        <b>W3（第 15–21 天）｜打磨周 · 预算 ¥700</b>
+        <ul>
+          <li>付费扩至 2 条：KN-01 + SV-01（全流程利润款），各 ¥50/天</li>
+          <li>话术按六问卡实战复盘，改出 v2 版应答节奏</li>
+          <li>首单冲刺：对上周全部意向客户做一轮"给确定性"跟进</li>
+          <li>补 1–2 条脱敏案例进工具包</li>
+        </ul>
+        <b>✅ 过关指标：</b>周强咨询 ≥3；<b>首单成交</b><br>
+        <b>未过关动作：</b>强咨询&lt;3 → 检查付费商品的人群匹配，换主打款
+      </div>
+      <div class="box">
+        <b>W4（第 22–30 天）｜收敛周 · 预算 ¥800</b>
+        <ul>
+          <li>跑通组合确认：哪 2–3 条商品 + 哪套话术在出单，固化下来</li>
+          <li>周末判断节点：算清首月自然/付费分开的咨询成本与成交成本</li>
+          <li>月复盘会：确定 M2 扩词方向与预算加码幅度</li>
+          <li>淘汰末位商品，为 M2 新品腾位</li>
+        </ul>
+        <b>✅ 过关指标：</b>月成交 ≥2 单、咨询成本可算清、跑通组合已固化<br>
+        <b>未过关动作：</b>0 成交 → 停付费，专攻 8.3 信任工具包，2 周后再点火
+      </div>
+    </div>
+
+    <h3>10.3 中期：第 31–60 天（按月拆）</h3>
+    <div class="grid g2">
+      <div class="box">
+        <b>M2（第 31–60 天）｜复制加码月</b>
+        <ul>
+          <li><b>扩词扩品：</b>每月新增 8–12 条商品替换末位（标题模板 5 套轮用，长尾词从咨询记录里挖——客户原话就是最好的关键词）</li>
+          <li><b>预算加码：</b>W4 算出 ROI ≥1.3 的商品，日预算 +50% 封顶 ¥100/天/条；ROI &lt;1 的保持 ¥50 观察；<b>不加码失败品</b></li>
+          <li><b>内容资产：</b>每周 2 条政策科普动态 + 1 条流程实拍；爆款动态拆成新商品</li>
+          <li><b>沉淀 SOP：</b>把六问卡、日报表、合规 Checklist 固化为可复用文档，为增开账号做准备</li>
+          <li><b>合规月审：</b>每月核对一次 1039 政策口径，同步更新全部商品详情</li>
+        </ul>
+        <b>✅ 过关指标：</b>月成交 ≥5 单、付费 ROI ≥1.3、SOP 文档成稿
+      </div>
+      <div class="box">
+        <b>加法原则（照做不内耗）</b>
+        <ul>
+          <li>数据证明才加：连续 2 周强咨询 ≥3/周的商品才有资格加预算</li>
+          <li>一次只加一个变量：加预算的当周不动素材、不加新品，否则归因不了</li>
+          <li>末位淘汰不停：每周日固定换血，保持每个 ID 8 条有效商品</li>
+          <li>本账号月成交 ≥3 单才评估增开新账号；顺序永远是：打透 1 个号 → 复制 SOP → 再开号</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>10.4 交付验收（给客户的承诺口径）</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:22%">时间点</th><th style="width:40%">可验收项</th><th>数据口径</th></tr></thead>
+        <tbody>
+          <tr><td>第 7 天</td><td>店铺账号 + 16 条商品全部上线并过审，信任基建齐备</td><td>后台截图</td></tr>
+          <tr><td>第 14 天</td><td>付费点火启动，首轮数据复盘与淘汰完成</td><td>日报表</td></tr>
+          <tr><td>第 30 天</td><td>月成交 ≥2 单（或强咨询 ≥12 条），咨询成本、成交成本算清</td><td>日报表 + 成交记录</td></tr>
+          <tr><td>第 60 天</td><td>月成交 ≥5 单，付费 ROI ≥1.3，团队 SOP 成稿</td><td>月复盘报告</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <b>预期管理：</b>第 1–2 周主要产出是"数据与话术打磨"，第 3 周起出单属正常节奏。B 端服务决策周期长，<b>第 30 天看强咨询量比看成交数更有意义</b>——强咨询进来了，成交只是时间问题。
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var bar = document.getElementById('tabs');
+  function activate(tabEl){
+    if(!tabEl) return;
+    var target = document.getElementById(tabEl.dataset.p);
+    if(!target) return;
+    bar.querySelectorAll('button').forEach(function(x){ x.classList.remove('on'); });
+    document.querySelectorAll('.wrap > .panel').forEach(function(x){ x.classList.remove('on'); });
+    tabEl.classList.add('on');
+    target.classList.add('on');
+    try{
+      if(getComputedStyle(bar).display === 'flex'){
+        var st = bar.getBoundingClientRect(), r = tabEl.getBoundingClientRect();
+        if(r.left < st.left + 8) bar.scrollLeft -= (st.left + 8 - r.left);
+        else if(r.right > st.right - 8) bar.scrollLeft += (r.right - st.right + 8);
+      }
+    }catch(_){}
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+  bar.addEventListener('click', function(e){
+    var t = e.target.closest('button');
+    if(t) activate(t);
+  });
+  bar.addEventListener('touchend', function(e){
+    var t = e.target.closest('button');
+    if(t){ e.preventDefault(); activate(t); }
+  }, {passive:false});
+
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('.cp');
+    if(!btn) return;
+    var pre = btn.parentElement.parentElement.querySelector('pre');
+    if(!pre) return;
+    var txt = pre.innerText, old = btn.textContent;
+    var done = function(){ btn.textContent='已复制'; setTimeout(function(){ btn.textContent=old; }, 1400); };
+    try{
+      var ta = document.createElement('textarea');
+      ta.value = txt; ta.setAttribute('readonly','');
+      ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none';
+      document.body.appendChild(ta);
+      ta.select(); ta.setSelectionRange(0, txt.length);
+      var ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      if(ok){ done(); return; }
+    }catch(_){}
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(function(){ alert('复制失败，请长按文本手动复制'); });
+    }else{ alert('复制失败，请长按文本手动复制'); }
+  });
+})();
+</script>
+</body>
+</html>
